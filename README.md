@@ -7,7 +7,7 @@ Collects test projects for the Lightstreamer DotNet Client library
 This project implemts a test case as described below:
 
 1. Create three Lightstramer client object each for a different Lightstreaner client session.
-2. repeat:
+2. Repeat forever next steps.
 	3. Open the three client sessions (wait for a max 7 seconds).
 	4. Subscribe some items for each session.
 	5. Wait (max 5 seconds) for some data for each subscritpion.

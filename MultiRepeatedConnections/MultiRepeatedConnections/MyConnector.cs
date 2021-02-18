@@ -13,15 +13,30 @@ namespace ConsoleApp3
 
 		public MyConnector(string host, string adapter_set)
 		{
-			this.client = new LightstreamerClient(host, adapter_set);
-			var clientListener = new MyListener(client.connectionDetails.AdapterSet);
-			client.addListener(clientListener);
+			try
+			{
+				this.client = new LightstreamerClient(host, adapter_set);
+				var clientListener = new MyListener(client.connectionDetails.AdapterSet);
+				client.connectionOptions.ForcedTransport = "WS-STREAMING";
+				client.addListener(clientListener);
+			}
+			catch (Exception e)
+			{
+				System.Console.WriteLine("Errore Create. " + e.Message) ;
+			}
+			
 		}
 
 		public async Task Connect(CancellationToken cancellationToken = default)
 		{
-			
-			client.connect();
+			try
+			{
+				client.connect();
+			}
+			catch (Exception e)
+			{
+				System.Console.WriteLine("Errore Create. " + e.Message);
+			}
 
 			while (!IAmConnected() && !cancellationToken.IsCancellationRequested)
 				await Task.Delay(70);
@@ -55,15 +70,22 @@ namespace ConsoleApp3
 		{
 			if (client != null)
 			{
-				//
+				// 
 			}
 		}
 
-		public void disconnect()
+		public async Task disconnectAsync(bool future)
 		{
 			if (client != null)
 			{
-				client.disconnect();
+				if (future)
+				{
+					await client.DisconnectFuture();
+				} else
+				{
+					client.disconnect();
+				}
+				
 			}
 		}
 

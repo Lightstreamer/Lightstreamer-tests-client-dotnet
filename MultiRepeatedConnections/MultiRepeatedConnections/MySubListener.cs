@@ -14,12 +14,12 @@ namespace ConsoleApp3
 
         void SubscriptionListener.onCommandSecondLevelItemLostUpdates(int lostUpdates, string key)
         {
-            throw new System.NotImplementedException();
+           //  throw new System.NotImplementedException();
         }
 
         void SubscriptionListener.onCommandSecondLevelSubscriptionError(int code, string message, string key)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         void SubscriptionListener.onEndOfSnapshot(string itemName, int itemPos)
@@ -40,32 +40,32 @@ namespace ConsoleApp3
 
         void SubscriptionListener.onListenEnd(Subscription subscription)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         void SubscriptionListener.onListenStart(Subscription subscription)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         void SubscriptionListener.onRealMaxFrequency(string frequency)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         void SubscriptionListener.onSubscription()
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         void SubscriptionListener.onSubscriptionError(int code, string message)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         void SubscriptionListener.onUnsubscription()
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         public bool ReceivedWhatINeed()

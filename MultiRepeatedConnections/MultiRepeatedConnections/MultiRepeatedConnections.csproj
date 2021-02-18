@@ -6,7 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lightstreamer.DotNetStandard.Client" Version="5.0.5" />
+    <PackageReference Include="CookieManager" Version="2.0.0" />
+    <PackageReference Include="DotNetty.Buffers" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Codecs.Http" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Codecs.Mqtt" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Common" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Handlers" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Transport" Version="0.6.0" />
+    <PackageReference Include="Lightstreamer.DotNetStandard.Client" Version="5.1.0" />
+    <PackageReference Include="NLog" Version="4.7.4" />
+    <PackageReference Include="System.Collections.Immutable" Version="5.0.0" />
+    <PackageReference Include="System.Management" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
